@@ -29,12 +29,15 @@ struct CookieView: View {
                 Image("CookieImage")
                     .resizable()
                     .frame(width: 60,height: 60)
+                    .shadow(color: Color.blue, radius: 20, x: 5, y: 5)
+
+                    
                     
             }.position(x:positionX,y:positionY)
-
                 
-           
-        }
+                
+           }
+        .background(Color(red: 30/255, green: 100, blue: 10/255))
     }
     func countUp() {
         counter = counter+1
@@ -42,8 +45,8 @@ struct CookieView: View {
         
     }
     func position() {
-        var x = Array(0...300)
-        var y = Array(0...600)
+        let x = Array(0...300)
+        let y = Array(0...600)
         positionX = CGFloat(x.randomElement()!)
         positionY = CGFloat(y.randomElement()!)
         
